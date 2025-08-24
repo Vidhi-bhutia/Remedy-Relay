@@ -21,7 +21,7 @@ embeddings = download_embeddings()
 pinecone_api_key = PINECONE_API_KEY
 pc = Pinecone(api_key=pinecone_api_key)
 
-index_name = "remedy-relay-2"
+index_name = "remedy-relay"
 
 if not pc.has_index(index_name):
     pc.create_index(name = index_name, dimension=384, metric="cosine", 
